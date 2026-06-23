@@ -197,9 +197,9 @@ body {
 .gua-line-main .change-marker { font-size: 11px; color: var(--gold); font-weight: 700; }
 
 .gua-line-bar-wrap { flex: 1; display: flex; justify-content: center; align-items: center; }
-.gua-line-main .yang-bar { width: 100%; max-width: 160px; height: 14px; background: var(--yang); border-radius: 4px; flex-shrink: 0; }
-.gua-line-main .yin-bar { display: flex; gap: 14px; flex-shrink: 0; justify-content: center; }
-.gua-line-main .yin-bar .half { width: 73px; height: 14px; background: var(--yin); border-radius: 4px; flex-shrink: 0; }
+.gua-line-main .yang-bar { width: 100%; max-width: 160px; height: 14px; background: var(--yang); border-radius: 4px; flex-shrink: 1; }
+.gua-line-main .yin-bar { display: flex; gap: 14px; flex-shrink: 1; justify-content: center; }
+.gua-line-main .yin-bar .half { width: 64px; height: 14px; background: var(--yin); border-radius: 4px; flex-shrink: 1; min-width: 40px; }
 
 .gua-line-row.changing .yang-bar { background: var(--gold); box-shadow: 0 0 10px rgba(184,134,11,0.3); animation: pulse 2s infinite; }
 .gua-line-row.changing .yin-bar .half { background: var(--gold); box-shadow: 0 0 10px rgba(184,134,11,0.3); animation: pulse 2s infinite; }
@@ -378,10 +378,11 @@ body {
   .gua-unicode { font-size: 42px; }
   .gua-name { font-size: 20px; }
   .gua-label { font-size: 13px; top: -14px; left: 14px; padding: 3px 16px; }
-  .gua-line-main .yang-bar { max-width: 220px; height: 18px; }
-  .gua-line-main .yin-bar .half { width: 95px; height: 18px; }
-  .gua-line-main .yin-bar { gap: 22px; }
-  .gua-line-right { width: 68px; }
+  .gua-line-main .yang-bar { width: 100%; max-width: 180px; height: 18px; }
+  .gua-line-main .yin-bar .half { width: 64px; height: 18px; }
+  .gua-line-main .yin-bar { gap: 14px; }
+  .gua-line-right { width: 60px; }
+  .gua-line-left { width: 24px; }
   .gua-line-main .yao-tag { font-size: 10px; }
   .gua-line-left { width: 30px; }
   .yao-detail-drop { font-size: 12px; padding: 5px 12px 6px 34px; }
