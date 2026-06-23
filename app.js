@@ -40,26 +40,34 @@ function setupInputs() {
   const inputs = [];
   for (let i=1;i<=6;i++) inputs.push(document.getElementById('yao'+i));
   inputs.forEach((inp, idx) => {
-    inp.addEventListener('keydown', e => {
-      if (['Backspace','Delete','Tab','ArrowLeft','ArrowRight','Escape'].includes(e.key)) return;
-      if (/^[6-9]$/.test(e.key)) {
-        e.preventDefault(); inp.value = e.key; inp.classList.add('filled'); inp.classList.remove('invalid');
-        if (idx<5) { const next = inputs[idx+1]; setTimeout(() => { next.focus(); next.select(); }, 0); }
-        return;
+    // 用 input 事件替代 keydown，避免 iOS 双击问题
+    inp.addEventListener('input', function(e) {
+      var raw = inp.value;
+      var cleaned = raw.replace(/[^6-9]/g, '').slice(0, 1);
+      if (!cleaned) { inp.value = ''; return; }
+      inp.value = cleaned;
+      inp.classList.add('filled');
+      inp.classList.remove('invalid');
+      if (idx < 5) {
+        var next = inputs[idx + 1];
+        setTimeout(function() { next.focus(); next.select(); }, 10);
       }
-      e.preventDefault(); inp.classList.add('invalid');
-      setTimeout(() => inp.classList.remove('invalid'), 300);
     });
-    inp.addEventListener('paste', e => {
+    inp.addEventListener('paste', function(e) {
       e.preventDefault();
-      const paste = (e.clipboardData ? e.clipboardData.getData('text') : '').replace(/\D/g,'').slice(0,6);
+      var paste = (e.clipboardData ? e.clipboardData.getData('text') : '').replace(/\D/g, '').slice(0, 6);
       if (!/^[6-9]+$/.test(paste)) return;
-      for (let j=0;j<paste.length&&j<6;j++) {
-        const t = document.getElementById('yao'+(j+1)); t.value = paste[j]; t.classList.add('filled');
+      for (var j = 0; j < paste.length && j < 6; j++) {
+        var t = document.getElementById('yao' + (j + 1));
+        t.value = paste[j];
+        t.classList.add('filled');
       }
-      if (paste.length<6) { const n = document.getElementById('yao'+(paste.length+1)); if(n)n.focus(); }
+      if (paste.length < 6) {
+        var n = document.getElementById('yao' + (paste.length + 1));
+        if (n) { setTimeout(function() { n.focus(); n.select(); }, 10); }
+      }
     });
-    inp.addEventListener('click', () => inp.select());
+    inp.addEventListener('click', function() { inp.select(); });
   });
 }
 
