@@ -126,7 +126,7 @@ body {
 .zhi-gua-input::placeholder { color: var(--text-muted); font-size: 11px; font-weight: 400; }
 
 /* ===== Results ===== */
-.results { flex: 1; min-height: 0; overflow-y: auto; padding: 4px 0; display: flex; align-items: flex-start; justify-content: center; }
+.results { flex: 1; min-height: 0; padding: 4px 0; display: flex; align-items: flex-start; justify-content: center; }
 
 /* ---- Dual hexagram layout: always side-by-side ---- */
 .dual-gua {
@@ -429,8 +429,8 @@ body {
   .zhi-gua-row { display: none; }
   .divinate-btn { padding: 8px 20px; font-size: 15px; }
   .clear-btn { padding: 8px 12px; font-size: 12px; }
-  .results { max-height: 52vh; }
-  #app.has-results .results { max-height: 45vh; }
+  .results { max-height: none; }
+  #app.has-results .results { max-height: none; }
 }
 
 /* ---- 极小屏 (< 360px) ---- */
