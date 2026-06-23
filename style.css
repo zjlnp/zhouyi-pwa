@@ -199,7 +199,7 @@ body {
 .gua-line-main .change-marker { font-size: 11px; color: var(--gold); font-weight: 700; }
 
 .gua-line-bar-wrap { flex: 1; display: flex; justify-content: center; align-items: center; }
-.gua-line-main .yang-bar { width: 160px; height: 14px; background: var(--yang); border-radius: 4px; flex-shrink: 1; }
+.gua-line-main .yang-bar { width: 100%; max-width: 160px; height: 14px; background: var(--yang); border-radius: 4px; flex-shrink: 1; }
 .gua-line-main .yin-bar { display: flex; gap: 14px; flex-shrink: 1; justify-content: center; }
 .gua-line-main .yin-bar .half { width: 73px; height: 14px; background: var(--yin); border-radius: 4px; flex-shrink: 1; min-width: 40px; }
 
@@ -351,7 +351,7 @@ body {
   .yao-num { width: 60px; height: 60px; font-size: 32px; }
   .gua-unicode { font-size: 38px; }
   .gua-name { font-size: 18px; }
-  .gua-line-main .yang-bar { width: 200px; height: 16px; }
+  .gua-line-main .yang-bar { width: 100%; max-width: 200px; height: 16px; }
   .gua-line-main .yin-bar .half { width: 91px; height: 16px; }
   .gua-line-main .yin-bar { gap: 18px; }
   .gua-line-right { width: 64px; }
@@ -381,7 +381,7 @@ body {
   .gua-unicode { font-size: 42px; }
   .gua-name { font-size: 20px; }
   .gua-label { font-size: 13px; top: -14px; left: 14px; padding: 3px 16px; }
-  .gua-line-main .yang-bar { width: 180px; height: 18px; }
+  .gua-line-main .yang-bar { width: 100%; max-width: 180px; height: 18px; }
   .gua-line-main .yin-bar .half { width: 83px; height: 18px; }
   .gua-line-main .yin-bar { gap: 14px; }
   .gua-line-right { width: 60px; }
