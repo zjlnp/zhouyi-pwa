@@ -201,7 +201,7 @@ body {
 .gua-line-bar-wrap { flex: 1; display: flex; justify-content: center; align-items: center; }
 .gua-line-main .yang-bar { width: 100%; max-width: 160px; height: 14px; background: var(--yang); border-radius: 4px; flex-shrink: 1; }
 .gua-line-main .yin-bar { display: flex; gap: 14px; flex-shrink: 1; justify-content: center; }
-.gua-line-main .yin-bar .half { width: 64px; height: 14px; background: var(--yin); border-radius: 4px; flex-shrink: 1; min-width: 40px; }
+.gua-line-main .yin-bar .half { width: 73px; height: 14px; background: var(--yin); border-radius: 4px; flex-shrink: 1; min-width: 40px; }
 
 .gua-line-row.changing .yang-bar { background: var(--gold); box-shadow: 0 0 10px rgba(184,134,11,0.3); animation: pulse 2s infinite; }
 .gua-line-row.changing .yin-bar .half { background: var(--gold); box-shadow: 0 0 10px rgba(184,134,11,0.3); animation: pulse 2s infinite; }
@@ -362,7 +362,7 @@ body {
   .gua-unicode { font-size: 38px; }
   .gua-name { font-size: 18px; }
   .gua-line-main .yang-bar { max-width: 200px; height: 16px; }
-  .gua-line-main .yin-bar .half { width: 87px; height: 16px; }
+  .gua-line-main .yin-bar .half { width: 91px; height: 16px; }
   .gua-line-main .yin-bar { gap: 18px; }
   .gua-line-right { width: 64px; }
   .gua-line-main .yao-tag { font-size: 10px; }
@@ -392,7 +392,7 @@ body {
   .gua-name { font-size: 20px; }
   .gua-label { font-size: 13px; top: -14px; left: 14px; padding: 3px 16px; }
   .gua-line-main .yang-bar { width: 100%; max-width: 180px; height: 18px; }
-  .gua-line-main .yin-bar .half { width: 64px; height: 18px; }
+  .gua-line-main .yin-bar .half { width: 83px; height: 18px; }
   .gua-line-main .yin-bar { gap: 14px; }
   .gua-line-right { width: 60px; }
   .gua-line-left { width: 24px; }
@@ -418,7 +418,7 @@ body {
   .gua-number { font-size: 11px; }
   .gua-shiyi { font-size: 11px; }
   .gua-line-main .yang-bar { width: 100%; max-width: 240px; height: 20px; }
-  .gua-line-main .yin-bar .half { width: 100px; height: 20px; }
+  .gua-line-main .yin-bar .half { width: 109px; height: 20px; }
   .gua-line-main .yin-bar { gap: 22px; }
   .gua-line-right { width: 72px; }
   .gua-line-left { width: 36px; }
@@ -433,7 +433,8 @@ body {
 @media (min-width: 1400px) {
   .gua-card { padding: 16px 24px 18px; }
   .gua-line-main .yang-bar { max-width: 280px; }
-  .gua-line-main .yin-bar .half { width: 120px; }
+  .gua-line-main .yin-bar .half { width: 127px; }
+  .gua-line-main .yin-bar { gap: 26px; }
 }
 
 /* ---- 横屏手机 (高度不足) ---- */
@@ -457,7 +458,7 @@ body {
   .yao-num { width: 44px; height: 44px; font-size: 22px; }
   .divinate-btn { font-size: 15px; padding: 10px 18px; }
   .gua-line-main .yang-bar { max-width: 100px; height: 12px; }
-  .gua-line-main .yin-bar .half { width: 43px; height: 12px; }
+  .gua-line-main .yin-bar .half { width: 45px; height: 12px; }
   .gua-line-main .yin-bar { gap: 10px; }
   .gua-name { font-size: 14px; }
   .gua-unicode { font-size: 26px; }
