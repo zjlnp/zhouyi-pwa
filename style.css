@@ -397,16 +397,17 @@ body {
 /* ---- 桌面 (> 960px) ---- */
 @media (min-width: 960px) {
   .title { font-size: 26px; }
-  .gua-card { flex: 0 0 420px; max-width: 420px; padding: 14px 20px 16px; border-radius: 16px; }
-  .middle-col { max-width: 220px; }
-  .ref-box { max-width: 200px; }
+  .dual-gua { flex-wrap: nowrap; gap: 10px; }
+  .gua-card { flex: 1 1 0; min-width: 320px; max-width: 460px; padding: 14px 20px 16px; border-radius: 16px; }
+  .middle-col { flex: 0 0 auto; min-width: 50px; max-width: 200px; }
+  .ref-box { max-width: 180px; }
   .gua-unicode { font-size: 48px; }
   .gua-name { font-size: 22px; }
   .gua-number { font-size: 11px; }
   .gua-shiyi { font-size: 11px; }
-  .gua-line-main .yang-bar { max-width: 240px; height: 20px; }
-  .gua-line-main .yin-bar .half { width: 107px; height: 20px; }
-  .gua-line-main .yin-bar { gap: 26px; }
+  .gua-line-main .yang-bar { width: 100%; max-width: 240px; height: 20px; }
+  .gua-line-main .yin-bar .half { width: 100px; height: 20px; }
+  .gua-line-main .yin-bar { gap: 22px; }
   .gua-line-right { width: 72px; }
   .gua-line-left { width: 36px; }
   .yao-num { width: 72px; height: 72px; font-size: 36px; }
@@ -419,8 +420,8 @@ body {
 
 /* ---- 大屏 (> 1400px) ---- */
 @media (min-width: 1400px) {
-  #app { max-width: 1200px; }
-  .gua-card { flex: 0 0 460px; max-width: 460px; }
+  #app { max-width: 1300px; }
+  .gua-card { max-width: 520px; }
 }
 
 /* ---- 横屏手机 (高度不足) ---- */
