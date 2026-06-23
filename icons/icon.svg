@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <circle cx="256" cy="256" r="250" fill="#faf9f6" stroke="#c44536" stroke-width="8"/>
+  <defs>
+    <clipPath id="c">
+      <rect x="0" y="0" width="256" height="512"/>
+    </clipPath>
+  </defs>
+  <!-- 阴阳鱼 — 左黑右白 -->
+  <circle cx="256" cy="256" r="230" fill="#2d2a26"/>
+  <circle cx="256" cy="256" r="230" fill="#f5f2eb" clip-path="url(#c)"/>
+  <!-- S-curve -->
+  <circle cx="256" cy="141" r="115" fill="#2d2a26"/>
+  <circle cx="256" cy="371" r="115" fill="#f5f2eb"/>
+  <!-- Eyes -->
+  <circle cx="256" cy="141" r="28" fill="#f5f2eb"/>
+  <circle cx="256" cy="371" r="28" fill="#2d2a26"/>
+</svg>
