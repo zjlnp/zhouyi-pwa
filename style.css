@@ -36,36 +36,8 @@ body {
 .title { font-size: 22px; font-weight: 900; letter-spacing: 0.06em; display: flex; align-items: center; gap: 6px; }
 
 /* Taiji icon */
-.taiji-icon {
-  display: inline-block; width: 26px; height: 26px; border-radius: 50%;
-  background: linear-gradient(to right, #f5f2eb 50%, #2d2a26 50%);
-  position: relative; vertical-align: middle; flex-shrink: 0;
-}
-.taiji-icon::before {
-  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 13px; height: 13px; border-radius: 50%;
-  background: radial-gradient(circle 2px at 50% 50%, #f5f2eb 100%, transparent 100%), #2d2a26;
-}
-.taiji-icon::after {
-  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-  width: 13px; height: 13px; border-radius: 50%;
-  background: radial-gradient(circle 2px at 50% 50%, #2d2a26 100%, transparent 100%), #f5f2eb;
-}
-.taiji-icon-sm {
-  display: inline-block; width: 18px; height: 18px; border-radius: 50%;
-  background: linear-gradient(to right, #f5f2eb 50%, #2d2a26 50%);
-  position: relative; vertical-align: middle; flex-shrink: 0;
-}
-.taiji-icon-sm::before {
-  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 9px; height: 9px; border-radius: 50%;
-  background: radial-gradient(circle 1.5px at 50% 50%, #f5f2eb 100%, transparent 100%), #2d2a26;
-}
-.taiji-icon-sm::after {
-  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-  width: 9px; height: 9px; border-radius: 50%;
-  background: radial-gradient(circle 1.5px at 50% 50%, #2d2a26 100%, transparent 100%), #f5f2eb;
-}
+.taiji-icon { display: inline-block; width: 26px; height: 26px; vertical-align: middle; flex-shrink: 0; }
+.taiji-icon-sm { display: inline-block; width: 18px; height: 18px; vertical-align: middle; flex-shrink: 0; }
 
 .top-right { display: flex; align-items: center; gap: 8px; position: relative; }
 .search-input {
