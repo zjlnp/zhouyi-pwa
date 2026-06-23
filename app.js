@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => document.getElementById('yao1').focus(), 100);
   setupSearch();
   setupBianSelect();
-  setupBaguaClicks();
   document.getElementById('divinate-btn').addEventListener('click', doDivination);
   document.getElementById('clear-btn').addEventListener('click', clearAll);
   document.getElementById('history-toggle').addEventListener('click', toggleHistory);
@@ -375,37 +374,6 @@ function renderRefBox(r) {
     `<div class="ref-rule">${ruleHtml}</div>` +
     (textHtml ? `<div class="ref-text">${textHtml.replace(/\n/g, '<br>')}</div>` : '') +
     (baihuaHtml ? `<div class="ref-baihua">白话：${baihuaHtml}</div>` : '');
-}
-
-// ===== 后天八卦点击 =====
-function setupBaguaClicks() {
-  const popup = document.getElementById('ba-popup');
-  const info = {
-    '离': {n:'离 ☲',w:'火',dir:'南',season:'夏',time:'午时 11-13',body:'目/心',nature:'丽/附'},
-    '坤': {n:'坤 ☷',w:'土',dir:'西南',season:'长夏',time:'未申时 13-17',body:'腹/脾',nature:'顺/柔'},
-    '兑': {n:'兑 ☱',w:'金',dir:'西',season:'秋',time:'酉时 17-19',body:'口/舌',nature:'悦/说'},
-    '乾': {n:'乾 ☰',w:'金',dir:'西北',season:'秋冬间',time:'戌亥时 19-23',body:'首/肺',nature:'健/刚'},
-    '坎': {n:'坎 ☵',w:'水',dir:'北',season:'冬',time:'子时 23-1',body:'耳/肾',nature:'陷/险'},
-    '艮': {n:'艮 ☶',w:'土',dir:'东北',season:'冬春间',time:'丑寅时 1-5',body:'手/胃',nature:'止/静'},
-    '震': {n:'震 ☳',w:'木',dir:'东',season:'春',time:'卯时 5-7',body:'足/肝',nature:'动/怒'},
-    '巽': {n:'巽 ☴',w:'木',dir:'东南',season:'春夏间',time:'辰巳时 7-11',body:'股/胆',nature:'入/顺'},
-  };
-  document.querySelectorAll('.ba-trigram').forEach(el => {
-    el.addEventListener('click', () => {
-      const bg = el.getAttribute('data-bg');
-      const d = info[bg];
-      if (!d) return;
-      popup.innerHTML = `<div class="ba-name">${d.n}</div>
-        五行：${d.w}<br>方位：${d.dir}<br>季节：${d.season}<br>时辰：${d.time}<br>身体：${d.body}<br>性情：${d.nature}`;
-      popup.classList.toggle('show');
-    });
-  });
-  // Click elsewhere to close
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.ba-trigram') && !e.target.closest('.ba-popup')) {
-      popup.classList.remove('show');
-    }
-  });
 }
 
 // ===== 之卦直查 【本卦】之【之卦】 =====
