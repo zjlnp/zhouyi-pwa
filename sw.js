@@ -1,5 +1,5 @@
 // Service Worker — 金钱卦 PWA 离线缓存
-const CACHE_NAME = 'zhouyi-v1';
+const CACHE_NAME = 'zhouyi-v2';
 
 // 需要预缓存的核心文件
 const PRECACHE = [
