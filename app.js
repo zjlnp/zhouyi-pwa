@@ -89,7 +89,7 @@ async function doDivination() {
   try {
     const result = await window.zhouyiAPI.divinate(lines);
     currentResult = result;
-    manualChanges = null;
+    manualChanges = null; // Reset manual changes on new divination
     document.getElementById('results').style.display = '';
     document.getElementById('app').classList.add('has-results');
     render(result);
