@@ -9,7 +9,6 @@
 <meta name="theme-color" content="#c44536">
 <meta name="description" content="按曾仕强金钱卦方法，周易六十四卦占筮">
 <script>
-// 私域访问控制 — 仅允许列表中的域名
 (function(){
   var allow = ['localhost','127.0.0.1','zjlnp.github.io'];
   if (allow.indexOf(location.hostname) === -1) {
@@ -32,7 +31,7 @@
 <div id="app">
 
 <div class="top-bar">
-  <h1 class="title"><svg class="taiji-icon" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#faf9f6"/><path d="M50 2A48 48 0 0 1 50 98A24 24 0 0 0 50 50A24 24 0 0 1 50 2Z" fill="#2d2a26"/><circle cx="50" cy="26" r="24" fill="#2d2a26"/><circle cx="50" cy="74" r="24" fill="#faf9f6"/><circle cx="50" cy="26" r="5" fill="#faf9f6"/><circle cx="50" cy="74" r="5" fill="#2d2a26"/></svg> 金钱卦 · 周易占筮</h1>
+  <h1 class="title"><svg class="taiji-icon" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#faf9f6"/><path d="M50 2A48 48 0 0 1 50 98A24 24 0 0 0 50 50A24 24 0 0 1 50 2Z" fill="#2d2a26"/><circle cx="50" cy="26" r="24" fill="#2d2a26"/><circle cx="50" cy="74" r="24" fill="#faf9f6"/><circle cx="50" cy="26" r="6" fill="#faf9f6"/><circle cx="50" cy="74" r="6" fill="#2d2a26"/></svg> 金钱卦 · 周易占筮</h1>
   <div class="top-right">
     <input type="text" id="search-input" class="search-input" placeholder="搜卦名/序号..." autocomplete="off" enterkeyhint="search">
     <div id="search-results" class="search-results" style="display:none"></div>
@@ -60,7 +59,7 @@
   </div>
 
   <div class="input-btns">
-    <button id="divinate-btn" class="divinate-btn"><svg class="taiji-icon-sm" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#faf9f6"/><path d="M50 2A48 48 0 0 1 50 98A24 24 0 0 0 50 50A24 24 0 0 1 50 2Z" fill="#2d2a26"/><circle cx="50" cy="26" r="24" fill="#2d2a26"/><circle cx="50" cy="74" r="24" fill="#faf9f6"/><circle cx="50" cy="26" r="5" fill="#faf9f6"/><circle cx="50" cy="74" r="5" fill="#2d2a26"/></svg> 起卦</button>
+    <button id="divinate-btn" class="divinate-btn"><svg class="taiji-icon-sm" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#faf9f6"/><path d="M50 2A48 48 0 0 1 50 98A24 24 0 0 0 50 50A24 24 0 0 1 50 2Z" fill="#2d2a26"/><circle cx="50" cy="26" r="24" fill="#2d2a26"/><circle cx="50" cy="74" r="24" fill="#faf9f6"/><circle cx="50" cy="26" r="6" fill="#faf9f6"/><circle cx="50" cy="74" r="6" fill="#2d2a26"/></svg> 起卦</button>
     <button id="clear-btn" class="clear-btn">✕ 清除</button>
   </div>
 </div>
