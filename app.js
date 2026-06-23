@@ -85,10 +85,6 @@ async function doDivination() {
     }
     lines.push(v);
   }
-  var btn = document.getElementById('divinate-btn');
-  var origHTML = btn.innerHTML;
-  btn.innerHTML = '起卦中...';
-  btn.disabled = true;
   divinating = true;
   try {
     const result = await window.zhouyiAPI.divinate(lines);
@@ -101,8 +97,6 @@ async function doDivination() {
     skipHistoryAdd = false;
   } finally {
     divinating = false;
-    btn.innerHTML = origHTML;
-    btn.disabled = false;
   }
 }
 
