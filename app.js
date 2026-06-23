@@ -85,11 +85,15 @@ async function doDivination() {
     }
     lines.push(v);
   }
+  var btn = document.getElementById('divinate-btn');
+  var origHTML = btn.innerHTML;
+  btn.innerHTML = '起卦中...';
+  btn.disabled = true;
   divinating = true;
   try {
     const result = await window.zhouyiAPI.divinate(lines);
     currentResult = result;
-    manualChanges = null; // Reset manual changes on new divination
+    manualChanges = null;
     document.getElementById('results').style.display = '';
     document.getElementById('app').classList.add('has-results');
     render(result);
@@ -97,6 +101,8 @@ async function doDivination() {
     skipHistoryAdd = false;
   } finally {
     divinating = false;
+    btn.innerHTML = origHTML;
+    btn.disabled = false;
   }
 }
 
