@@ -136,6 +136,9 @@
     };
   }
 
+  // 立即预加载数据，避免首次起卦时等待
+  loadData();
+
   // 暴露与 Electron preload 完全相同的 API
   window.zhouyiAPI = {
     getHexagram: function(id) {
