@@ -234,16 +234,6 @@ body {
   gap: 6px; padding: 4px 0; flex-wrap: wrap;
   width: 100%;
 }
-.ref-toggle { text-align: center; }
-.ref-toggle-btn {
-  display: inline-block; font-size: 12px; font-weight: 600; cursor: pointer;
-  padding: 4px 12px; border: 1px solid var(--border); border-radius: 6px;
-  background: #fffdf7; color: var(--gold); user-select: none;
-  touch-action: manipulation; margin-bottom: 4px;
-}
-.ref-toggle-btn:hover { background: #fef9e7; border-color: var(--gold); }
-.ref-toggle .ref-box { display: none; }
-.ref-toggle.open .ref-box { display: block; }
 .ref-box {
   width: 100%; max-width: 100%;
   font-size: 11px; line-height: 1.5;
