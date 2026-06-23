@@ -44,7 +44,7 @@ function setupInputs() {
       if (['Backspace','Delete','Tab','ArrowLeft','ArrowRight','Escape'].includes(e.key)) return;
       if (/^[6-9]$/.test(e.key)) {
         e.preventDefault(); inp.value = e.key; inp.classList.add('filled'); inp.classList.remove('invalid');
-        if (idx<5) { inputs[idx+1].focus(); inputs[idx+1].select(); }
+        if (idx<5) { const next = inputs[idx+1]; setTimeout(() => { next.focus(); next.select(); }, 0); }
         return;
       }
       e.preventDefault(); inp.classList.add('invalid');
