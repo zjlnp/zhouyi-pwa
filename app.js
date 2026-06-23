@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Ensure focus sticks after Electron window fully renders
   setTimeout(() => document.getElementById('yao1').focus(), 100);
   setupSearch();
-  setupGanZhi();
   setupBianSelect();
   setupBaguaClicks();
   document.getElementById('divinate-btn').addEventListener('click', doDivination);
@@ -742,68 +741,6 @@ function toggleHistory(force) {
   panel.style.display = show ? '' : 'none';
   btn.classList.toggle('active', show);
   if (show) renderHistoryList();
-}
-
-// ===== 干支历法显示 =====
-function setupGanZhi() {
-  const mainEl = document.getElementById('gz-main');
-  const subEl = document.getElementById('gz-sub');
-  const labelEl = document.getElementById('gz-date-label');
-  const card = document.getElementById('ganzhi-card');
-
-  // Add today + picker buttons
-  const actionsEl = card.querySelector('.gz-actions');
-  const todayBtn = document.createElement('span');
-  todayBtn.className = 'gz-today-btn';
-  todayBtn.textContent = '今天';
-  todayBtn.addEventListener('click', () => updateGanZhiDisplay(new Date()));
-  actionsEl.insertBefore(todayBtn, actionsEl.firstChild);
-
-  const pickBtn = document.createElement('span');
-  pickBtn.className = 'gz-date-btn';
-  pickBtn.textContent = '选日期';
-  const picker = document.getElementById('gz-date-picker');
-  pickBtn.addEventListener('click', () => picker.showPicker ? picker.showPicker() : picker.click());
-  actionsEl.insertBefore(pickBtn, actionsEl.firstChild);
-
-  picker.addEventListener('change', () => {
-    if (picker.value) updateGanZhiDisplay(new Date(picker.value + 'T12:00:00'));
-  });
-
-  // Initial display
-  updateGanZhiDisplay(new Date());
-
-  // Auto-update every 60 seconds (focus/visibility handles instant refresh)
-  setInterval(() => {
-    if (!document.getElementById('gz-date-picker').value) {
-      updateGanZhiDisplay(new Date());
-    }
-  }, 60000);
-
-  // Refresh on window focus
-  window.addEventListener('focus', () => {
-    if (!document.getElementById('gz-date-picker').value) {
-      updateGanZhiDisplay(new Date());
-    }
-  });
-  document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible' && !document.getElementById('gz-date-picker').value) {
-      updateGanZhiDisplay(new Date());
-    }
-  });
-}
-
-function updateGanZhiDisplay(date) {
-  const gz = calcGanZhi(date);
-  if (!gz || gz.dateStr === 'error') { document.getElementById('gz-main').textContent = '--'; return; }
-  document.getElementById('gz-main').textContent = formatGanZhi(gz);
-  const lu = gz.nongLi;
-  const leapTxt = lu.isLeap ? '闰' : '';
-  let sub = `农历${leapTxt}${lu.mn}月${nongLiDayCN(lu.d)} · ${gz.year.sz}年`;
-  // 节气仅当天显示
-  if (gz.jieQi.isToday) sub += ` · ${gz.jieQi.name}`;
-  document.getElementById('gz-sub').textContent = sub;
-  document.getElementById('gz-date-label').textContent = gz.dateStr;
 }
 
 // ===== Floating copy button =====
