@@ -185,8 +185,8 @@ body {
 /* Gua Visual — yao lines */
 .gua-visual { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%; padding: 4px 0; }
 .gua-line-row { width: 100%; }
-.gua-line-row.changing { border-left: 2px dashed var(--gold); }
-.gua-line-row.changed { border-left: 2px dotted #c4956b; }
+.gua-line-row.changing { box-shadow: inset 3px 0 0 var(--gold); }
+.gua-line-row.changed { box-shadow: inset 3px 0 0 #c4956b; }
 .gua-line-main {
   display: flex; align-items: center; padding: 5px 0; cursor: pointer;
   border-radius: 3px; transition: background 0.15s; touch-action: manipulation;
