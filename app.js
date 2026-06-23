@@ -284,24 +284,10 @@ function renderGuaCard(prefix, gua, changingYaos, isBian) {
   }
 }
 
-// ===== Render Reference Box — 朱熹考变占法（桌面默认收起） =====
+// ===== Render Reference Box — 朱熹考变占法 =====
 function renderRefBox(r) {
-  const toggle = document.getElementById('ref-toggle');
   const box = document.getElementById('ref-box');
   const num = r.changing_yaos.length;
-
-  // Show toggle, set up click if not already
-  toggle.style.display = '';
-  if (!toggle._wired) {
-    toggle._wired = true;
-    toggle.querySelector('.ref-toggle-btn').addEventListener('click', function() {
-      toggle.classList.toggle('open');
-      this.textContent = toggle.classList.contains('open') ? '🔮 变占 ▴' : '🔮 变占 ▾';
-    });
-  }
-  // Reset to collapsed
-  toggle.classList.remove('open');
-  toggle.querySelector('.ref-toggle-btn').textContent = '🔮 变占 ▾';
   // Helper: get yao text + baihua from hexagram data
   function getYaoText(gua, pos) {
     const line = gua.lines_display.find(l => l.position === pos);
