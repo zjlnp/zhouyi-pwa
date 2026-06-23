@@ -8,6 +8,18 @@
 <meta name="apple-mobile-web-app-title" content="金钱卦">
 <meta name="theme-color" content="#c44536">
 <meta name="description" content="按曾仕强金钱卦方法，周易六十四卦占筮">
+<script>
+// 私域访问控制 — 仅允许列表中的域名
+(function(){
+  var allow = ['localhost','127.0.0.1','zjlnp.github.io'];
+  if (allow.indexOf(location.hostname) === -1) {
+    document.documentElement.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', function(){
+      document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100dvh;font-family:sans-serif;color:#999">访问受限</div>';
+    });
+  }
+})();
+</script>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192b.png">
 <link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512b.png">
