@@ -373,8 +373,8 @@ body {
 
   /* Three-column: ben | middle | bian */
   .dual-gua { flex-wrap: nowrap; gap: 1%; }
-  .gua-card { flex: 0 0 38%; padding: 12px 16px 14px; }
-  .middle-col { flex: 0 0 20%; flex-direction: column; }
+  .gua-card { flex: 0 0 38%; min-width: 0; padding: 12px 16px 14px; }
+  .middle-col { flex: 0 0 20%; min-width: 0; flex-direction: column; }
   .gua-arrow { transform: none; }
   .gua-arrow::before { margin-top: 0; margin-left: -3px; }
   .gua-unicode { font-size: 42px; }
@@ -399,8 +399,8 @@ body {
 @media (min-width: 960px) {
   .title { font-size: 26px; }
   .dual-gua { flex-wrap: nowrap; gap: 1%; }
-  .gua-card { flex: 0 0 37%; padding: 14px 20px 16px; border-radius: 16px; }
-  .middle-col { flex: 0 0 22%; }
+  .gua-card { flex: 0 0 37%; min-width: 0; padding: 14px 20px 16px; border-radius: 16px; }
+  .middle-col { flex: 0 0 22%; min-width: 0; }
   .ref-box { max-width: none; }
   .gua-unicode { font-size: 48px; }
   .gua-name { font-size: 22px; }
